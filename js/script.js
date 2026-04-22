@@ -5,7 +5,7 @@ let state = {
     layout: [],
     blackCells: [],
     size: { x: 0, y: 0 },
-    cellSize: 15,
+    cellSize: 10,
     spawnRate: 10,
   },
   colourConfig: {
@@ -73,7 +73,7 @@ function windowResized() {
   state.grid.size.y = Math.floor(windowHeight / state.grid.cellSize);
 
   GridUtils.clear();
-  ObstacleUtils.addEidraLogo();
+  GridUtils.reset();
 }
 
 function draw() {
